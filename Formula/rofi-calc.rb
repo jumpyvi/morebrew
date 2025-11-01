@@ -36,6 +36,18 @@ class RofiCalc < Formula
     (lib/"rofi").install "build/src/libcalc.so" => "calc.so"
   end
 
+  def caveats
+    <<~EOS
+      To use the rofi-calc plugin, set the plugin path:
+        export ROFI_PLUGIN_PATH=${HOMEBREW_PREFIX}/lib/rofi
+
+      Then run:
+        rofi -show calc
+
+      Add the export to your shell config to make it permanent.
+    EOS
+  end
+
   test do
     assert_path_exists lib/"rofi/calc.so"
   end
