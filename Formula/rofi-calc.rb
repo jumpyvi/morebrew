@@ -13,7 +13,7 @@ class RofiCalc < Formula
 
   bottle do
     root_url "https://github.com/jumpyvi/homebrew-morebrew/releases/download/rofi-calc-2.5.0"
-    sha256 x86_64_linux: "010bee67584ef4580fa8bd00ffe2d344b5d6f295aa4f79648617a3711f956236"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "9d8bb1e8364a9675d028b29139064363a22cfa360c4c09331e71ee933f5a156c"
   end
 
   # Build dependencies
