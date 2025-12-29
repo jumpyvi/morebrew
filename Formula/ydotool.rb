@@ -3,7 +3,7 @@ class Ydotool < Formula
   homepage "https://github.com/ReimuNotMoe/ydotool"
   url "https://github.com/ReimuNotMoe/ydotool/archive/refs/tags/v1.0.4.tar.gz"
   sha256 "ba075a43aa6ead51940e892ecffa4d0b8b40c241e4e2bc4bd9bd26b61fde23bd"
-  license "AGPL-3.0"
+  license "AGPL-3.0-only"
   head "https://github.com/ReimuNotMoe/ydotool.git", branch: "master"
 
   livecheck do
