@@ -14,7 +14,7 @@ class Ydotool < Formula
   bottle do
     root_url "https://github.com/jumpyvi/homebrew-morebrew/releases/download/ydotool-1.0.4"
     rebuild 1
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "f292e94316b218e899fb59434561a46db09b49ed25991db9a6ab92573d80538f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "3b46ceb7f3d79ce3b543de0370f929f4dde00d3e55220e3f909c6b8865559162"
   end
 
   depends_on "cmake" => :build
@@ -62,6 +62,7 @@ class Ydotool < Formula
   end
 
   test do
-    assert_match version.to_s, shell_output("#{bin}/ydotool --version")
+    assert_match "Usage: ydotool <cmd> <args>", shell_output("#{bin}/ydotool --help")
+    assert_match "ydotool Daemon", shell_output("#{bin}/ydotoold --help")
   end
 end
