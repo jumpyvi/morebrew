@@ -12,12 +12,8 @@ class LibvirtSystem < Formula
   end
 
   bottle do
-    sha256 arm64_tahoe:   "d9a3a6eff482497615ff9563ca04cb33a1bcc0c3b1181ab4157a01b5fed74674"
-    sha256 arm64_sequoia: "4ee2fdb66753b200d128e045cf6f0b919df62682195bcd00735e32a9e56e491b"
-    sha256 arm64_sonoma:  "e50dc20c7f39ab7ed714f34ae273e604d22f82a3d37c447dee7783f77df9acfc"
-    sha256 sonoma:        "710cc28a5836cd9b947d2a571941e267ce54dc8b6666ec25c48d9480d7b16c41"
-    sha256 arm64_linux:   "682f89989f94446da0cf6fcb23a25f0980af1973b36f2247c5b447456105f012"
-    sha256 x86_64_linux:  "8cbd53c67b20a32b295d02cfd8c08fc9d17834fa712baec2ae1538ea2136922f"
+    root_url "https://github.com/jumpyvi/homebrew-morebrew/releases/download/libvirt-system-11.10.0"
+    sha256 x86_64_linux: "af8d44eb25a18c48770ff95bfdbd377b04ffab3e48c381edb6dbeea26116a7f6"
   end
 
   depends_on "docutils" => :build
