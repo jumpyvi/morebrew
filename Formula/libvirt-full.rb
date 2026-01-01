@@ -13,7 +13,7 @@ class LibvirtFull < Formula
 
   bottle do
     root_url "https://github.com/jumpyvi/homebrew-morebrew/releases/download/libvirt-full-11.10.0"
-    sha256 x86_64_linux: "af8d44eb25a18c48770ff95bfdbd377b04ffab3e48c381edb6dbeea26116a7f6"
+    sha256 x86_64_linux: "7e2d48f71c766d443d6f711e5df559211d4f8a472a3a9872e42e3131e7d04c80"
   end
 
   depends_on "docutils" => :build
