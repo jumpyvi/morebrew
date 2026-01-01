@@ -1,5 +1,5 @@
-class LibvirtSystem < Formula
-  desc "C virtualization API"
+class LibvirtFull < Formula
+  desc "C virtualization API, now with udev support"
   homepage "https://libvirt.org/"
   url "https://download.libvirt.org/libvirt-11.10.0.tar.xz"
   sha256 "66154fee836235678b712676b2589c45f66e3d6a8721ee0697c9f20a66cad0d8"
@@ -12,41 +12,36 @@ class LibvirtSystem < Formula
   end
 
   bottle do
-    root_url "https://github.com/jumpyvi/homebrew-morebrew/releases/download/libvirt-system-11.10.0"
-    sha256 x86_64_linux: "af8d44eb25a18c48770ff95bfdbd377b04ffab3e48c381edb6dbeea26116a7f6"
+    sha256 x86_64_linux: "8cbd53c67b20a32b295d02cfd8c08fc9d17834fa712baec2ae1538ea2136922f"
   end
+
+  env :std
 
   depends_on "docutils" => :build
   depends_on "gettext" => :build
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkgconf" => :build
+  depends_on "acl"
+  depends_on "curl"
+  depends_on "cyrus-sasl"
   depends_on "glib"
+  depends_on "glibc"
   depends_on "gnutls"
   depends_on "gperf"
+  depends_on "icu4c"
   depends_on "json-c"
   depends_on "libiscsi"
+  depends_on "libnl"
+  depends_on "libpciaccess"
   depends_on "libssh2"
+  depends_on "libtirpc"
+  depends_on "libxml2"
+  depends_on "libxslt"
   depends_on "readline"
+  depends_on "util-linux"
 
-  uses_from_macos "libxslt" => :build
-  uses_from_macos "perl" => :build
-  uses_from_macos "curl"
-  uses_from_macos "libxml2"
-
-  on_macos do
-    depends_on "gettext"
-  end
-
-  on_linux do
-    depends_on "acl"
-    depends_on "cyrus-sasl"
-    depends_on "libnl"
-    depends_on "libpciaccess"
-    depends_on "libtirpc"
-    depends_on "libxml2"
-    depends_on "util-linux"
-  end
+  conflicts_with "libvirt", because: "this is a special build of libvirt with udev support"
 
   resource "eudev" do
     url "https://github.com/eudev-project/eudev/releases/download/v3.2.14/eudev-3.2.14.tar.gz"
