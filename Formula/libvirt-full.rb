@@ -1,4 +1,4 @@
-class LibvirtSystem < Formula
+class LibvirtFull < Formula
   desc "C virtualization API"
   homepage "https://libvirt.org/"
   url "https://download.libvirt.org/libvirt-11.10.0.tar.xz"
@@ -12,7 +12,7 @@ class LibvirtSystem < Formula
   end
 
   bottle do
-    root_url "https://github.com/jumpyvi/homebrew-morebrew/releases/download/libvirt-system-11.10.0"
+    root_url "https://github.com/jumpyvi/homebrew-morebrew/releases/download/libvirt-full-11.10.0"
     sha256 x86_64_linux: "af8d44eb25a18c48770ff95bfdbd377b04ffab3e48c381edb6dbeea26116a7f6"
   end
 
