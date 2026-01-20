@@ -7,7 +7,7 @@ class Dmidecode < Formula
 
   bottle do
     root_url "https://github.com/jumpyvi/homebrew-morebrew/releases/download/dmidecode-3.6"
-    sha256 x86_64_linux: "7e2d48f71c766d443d6f711e5df559211d4f8a472a3a9872e42e3131e7d04c80"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "66cefad151cfea76ae39b88fa7b41f884e7634d3bbe98b7d628978296b886827"
   end
 
   def install
